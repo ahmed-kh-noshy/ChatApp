@@ -6,24 +6,51 @@
 //
 
 import UIKit
-
+import Firebase
 class SignupViewController: UIViewController {
-
+    
+    var email: String = ""
+    var password: String = ""
+    @IBOutlet weak var errorMassage: UILabel!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var rePasswordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBAction func signupButton(_ sender: UIButton) {
+        print("presed")
+        if checkPassword() {
+            
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if error != nil{
+                    print("registerd")
+                }else{
+                    print(error as Any)
+                }
+            }
+        }
+        
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func checkPassword() -> Bool {
+        if (passwordTextField.text!) != (rePasswordTextField.text!){
+            errorMassage.text = "*not matching retype password"
+            return false
+        }else{
+            password = passwordTextField.text!
+            return true
+        }
     }
-    */
-
+    
+    
 }
+

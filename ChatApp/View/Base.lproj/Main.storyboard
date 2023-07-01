@@ -161,21 +161,30 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zpK-Fl-oJs">
                                 <rect key="frame" x="50" y="466" width="293" height="34"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7E-zP-XMG">
                                 <rect key="frame" x="50" y="520" width="293" height="34"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="re-password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="594-NW-k3E">
                                 <rect key="frame" x="50" y="574" width="293" height="34"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpA-en-hJI">
+                                <rect key="frame" x="50" y="616" width="293" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1p-eK-Nth">
                                 <rect key="frame" x="70" y="663" width="253" height="35"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Signup"/>
+                                <connections>
+                                    <action selector="signupButton:" destination="9FM-Rj-Xwe" eventType="touchUpInside" id="WdG-Ht-V8Z"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hi0-hb-1Iu"/>
@@ -183,16 +192,19 @@
                         <constraints>
                             <constraint firstItem="v5Q-Wo-CSh" firstAttribute="leading" secondItem="hi0-hb-1Iu" secondAttribute="leading" constant="50" id="2Vo-ex-2w6"/>
                             <constraint firstItem="mIF-sY-03E" firstAttribute="top" secondItem="v5Q-Wo-CSh" secondAttribute="bottom" constant="50" id="5u5-JS-yJW"/>
-                            <constraint firstItem="w1p-eK-Nth" firstAttribute="top" secondItem="594-NW-k3E" secondAttribute="bottom" constant="55" id="78N-6f-CTq"/>
                             <constraint firstItem="594-NW-k3E" firstAttribute="top" secondItem="H7E-zP-XMG" secondAttribute="bottom" constant="20" id="7dl-mX-k9Q"/>
                             <constraint firstItem="hi0-hb-1Iu" firstAttribute="trailing" secondItem="594-NW-k3E" secondAttribute="trailing" constant="50" id="9nb-De-rlk"/>
                             <constraint firstItem="hi0-hb-1Iu" firstAttribute="trailing" secondItem="zpK-Fl-oJs" secondAttribute="trailing" constant="50" id="EWy-h3-86X"/>
+                            <constraint firstItem="w1p-eK-Nth" firstAttribute="top" secondItem="MpA-en-hJI" secondAttribute="bottom" constant="47" id="FL9-UM-OJR"/>
+                            <constraint firstItem="MpA-en-hJI" firstAttribute="leading" secondItem="hi0-hb-1Iu" secondAttribute="leading" constant="50" id="JBP-Fl-gcd"/>
+                            <constraint firstItem="MpA-en-hJI" firstAttribute="top" secondItem="594-NW-k3E" secondAttribute="bottom" constant="8" symbolic="YES" id="MEc-fg-fGZ"/>
                             <constraint firstItem="mIF-sY-03E" firstAttribute="leading" secondItem="hi0-hb-1Iu" secondAttribute="leading" constant="50" id="Qc0-0S-Q5y"/>
                             <constraint firstItem="hi0-hb-1Iu" firstAttribute="trailing" secondItem="H7E-zP-XMG" secondAttribute="trailing" constant="50" id="ZH9-kl-vUm"/>
                             <constraint firstItem="zpK-Fl-oJs" firstAttribute="leading" secondItem="hi0-hb-1Iu" secondAttribute="leading" constant="50" id="bmH-Jk-JGJ"/>
                             <constraint firstItem="H7E-zP-XMG" firstAttribute="top" secondItem="zpK-Fl-oJs" secondAttribute="bottom" constant="20" id="d5N-Da-DU3"/>
                             <constraint firstItem="hi0-hb-1Iu" firstAttribute="trailing" secondItem="mIF-sY-03E" secondAttribute="trailing" constant="50" id="eUP-Sn-L7t"/>
                             <constraint firstItem="zpK-Fl-oJs" firstAttribute="top" secondItem="mIF-sY-03E" secondAttribute="bottom" constant="103" id="gE1-75-Usw"/>
+                            <constraint firstItem="hi0-hb-1Iu" firstAttribute="trailing" secondItem="MpA-en-hJI" secondAttribute="trailing" constant="50" id="ku0-Ya-c3S"/>
                             <constraint firstItem="hi0-hb-1Iu" firstAttribute="trailing" secondItem="v5Q-Wo-CSh" secondAttribute="trailing" constant="50" id="kxh-ib-E0K"/>
                             <constraint firstItem="hi0-hb-1Iu" firstAttribute="trailing" secondItem="w1p-eK-Nth" secondAttribute="trailing" constant="70" id="nEB-t3-bex"/>
                             <constraint firstItem="v5Q-Wo-CSh" firstAttribute="top" secondItem="hi0-hb-1Iu" secondAttribute="top" constant="75" id="nKE-Ul-lgF"/>
@@ -203,12 +215,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="kQh-xY-I8u"/>
                     <connections>
+                        <outlet property="emailTextField" destination="zpK-Fl-oJs" id="hV4-8k-2yQ"/>
+                        <outlet property="errorMassage" destination="MpA-en-hJI" id="QNe-zu-JeL"/>
+                        <outlet property="passwordTextField" destination="594-NW-k3E" id="gh8-5H-VMx"/>
+                        <outlet property="rePasswordTextField" destination="594-NW-k3E" id="SyW-dA-Jkd"/>
                         <segue destination="L13-mE-NGS" kind="show" id="kLR-uT-WIY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9l2-Du-1Du" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1752" y="317"/>
+            <point key="canvasLocation" x="1751.9083969465648" y="316.90140845070425"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="53Q-d0-jZq">
@@ -238,6 +254,9 @@
         <image name="sigupIcon" width="96" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
