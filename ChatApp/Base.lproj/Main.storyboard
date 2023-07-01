@@ -3,6 +3,65 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="XIs-tB-31P">
+            <objects>
+                <viewController id="BGs-Bb-WdP" customClass="ViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Gb-LM-Tuu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChatApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwD-mp-eE7">
+                                <rect key="frame" x="50" y="133" width="293" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" highlightedImage="icon" translatesAutoresizingMaskIntoConstraints="NO" id="lsV-67-8bi">
+                                <rect key="frame" x="50" y="237" width="293" height="96"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMT-RN-PVU">
+                                <rect key="frame" x="50" y="445" width="293" height="34.333333333333314"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hke-LG-f9X">
+                                <rect key="frame" x="150" y="498" width="93" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Signup"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sjo-3q-Z4y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sjo-3q-Z4y" firstAttribute="trailing" secondItem="Hke-LG-f9X" secondAttribute="trailing" constant="150" id="3Iz-gm-bME"/>
+                            <constraint firstItem="MwD-mp-eE7" firstAttribute="top" secondItem="sjo-3q-Z4y" secondAttribute="top" constant="74" id="Eyh-NP-nlJ"/>
+                            <constraint firstItem="sjo-3q-Z4y" firstAttribute="trailing" secondItem="MwD-mp-eE7" secondAttribute="trailing" constant="50" id="I7H-Ep-wGd"/>
+                            <constraint firstItem="sjo-3q-Z4y" firstAttribute="trailing" secondItem="DMT-RN-PVU" secondAttribute="trailing" constant="50" id="MWy-Si-WtE"/>
+                            <constraint firstItem="lsV-67-8bi" firstAttribute="leading" secondItem="sjo-3q-Z4y" secondAttribute="leading" constant="50" id="Q2O-AV-tcR"/>
+                            <constraint firstItem="sjo-3q-Z4y" firstAttribute="trailing" secondItem="lsV-67-8bi" secondAttribute="trailing" constant="50" id="SPI-Yr-pI9"/>
+                            <constraint firstItem="DMT-RN-PVU" firstAttribute="top" secondItem="lsV-67-8bi" secondAttribute="bottom" constant="112" id="Sdp-vs-IZ9"/>
+                            <constraint firstItem="MwD-mp-eE7" firstAttribute="leading" secondItem="sjo-3q-Z4y" secondAttribute="leading" constant="50" id="WQ7-Or-6LI"/>
+                            <constraint firstItem="lsV-67-8bi" firstAttribute="top" secondItem="MwD-mp-eE7" secondAttribute="bottom" constant="56" id="ctQ-kP-g1V"/>
+                            <constraint firstItem="DMT-RN-PVU" firstAttribute="leading" secondItem="sjo-3q-Z4y" secondAttribute="leading" constant="50" id="ePV-Pb-qDK"/>
+                            <constraint firstItem="Hke-LG-f9X" firstAttribute="top" secondItem="DMT-RN-PVU" secondAttribute="bottom" constant="18.666666666666686" id="gSl-5z-bhN"/>
+                            <constraint firstItem="Hke-LG-f9X" firstAttribute="leading" secondItem="sjo-3q-Z4y" secondAttribute="leading" constant="150" id="pI3-3d-ueL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SxK-K8-zQC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="-58"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon" width="96" height="96"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
