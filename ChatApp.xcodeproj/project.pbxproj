@@ -135,8 +135,8 @@
 		B0C87AA12A50978B000B7467 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				53BBE95A2A4DCBBB00FC12E0 /* LaunchScreen.storyboard */,
 				53BBE9552A4DCBBA00FC12E0 /* Main.storyboard */,
+				53BBE95A2A4DCBBB00FC12E0 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
