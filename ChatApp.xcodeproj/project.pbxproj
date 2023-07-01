@@ -99,12 +99,10 @@
 		53BBE94E2A4DCBBA00FC12E0 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
-				53BBE94F2A4DCBBA00FC12E0 /* AppDelegate.swift */,
-				53BBE9512A4DCBBA00FC12E0 /* SceneDelegate.swift */,
-				53BBE9532A4DCBBA00FC12E0 /* ViewController.swift */,
-				53BBE9552A4DCBBA00FC12E0 /* Main.storyboard */,
+				B0C87AA22A509799000B7467 /* Controller */,
+				B0C87AA12A50978B000B7467 /* View */,
+				B0C87AA02A509781000B7467 /* Mode */,
 				53BBE9582A4DCBBB00FC12E0 /* Assets.xcassets */,
-				53BBE95A2A4DCBBB00FC12E0 /* LaunchScreen.storyboard */,
 				53BBE95D2A4DCBBB00FC12E0 /* Info.plist */,
 			);
 			path = ChatApp;
@@ -125,6 +123,32 @@
 				53BBE9722A4DCBBC00FC12E0 /* ChatAppUITestsLaunchTests.swift */,
 			);
 			path = ChatAppUITests;
+			sourceTree = "<group>";
+		};
+		B0C87AA02A509781000B7467 /* Mode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mode;
+			sourceTree = "<group>";
+		};
+		B0C87AA12A50978B000B7467 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53BBE95A2A4DCBBB00FC12E0 /* LaunchScreen.storyboard */,
+				53BBE9552A4DCBBA00FC12E0 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B0C87AA22A509799000B7467 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				53BBE94F2A4DCBBA00FC12E0 /* AppDelegate.swift */,
+				53BBE9512A4DCBBA00FC12E0 /* SceneDelegate.swift */,
+				53BBE9532A4DCBBA00FC12E0 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
