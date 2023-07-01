@@ -17,11 +17,13 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBAction func signupButton(_ sender: UIButton) {
-        print("presed")
+        email = emailTextField.text!
         if checkPassword() {
-            
+            reSetMessage()
+            print(email)
+            print(password)
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                if error != nil{
+                if error == nil{
                     print("registerd")
                 }else{
                     print(error as Any)
@@ -37,20 +39,31 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         // Do any additional setup after loading the view.
     }
     
     func checkPassword() -> Bool {
-        if (passwordTextField.text!) != (rePasswordTextField.text!){
+        if (passwordTextField.text) != (rePasswordTextField.text){
             errorMassage.text = "*not matching retype password"
             return false
         }else{
-            password = passwordTextField.text!
-            return true
+            if passwordTextField.text!.count <= 5{
+                errorMassage.text = "password must be aat least 6 charcters"
+                return false
+            }else{
+                password = passwordTextField.text!
+                return true
+            }
         }
     }
     
     
+    func reSetMessage() {
+        errorMassage.text = ""
+    }
+    
+    
 }
+
+
 

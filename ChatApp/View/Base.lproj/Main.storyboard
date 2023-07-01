@@ -217,7 +217,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="zpK-Fl-oJs" id="hV4-8k-2yQ"/>
                         <outlet property="errorMassage" destination="MpA-en-hJI" id="QNe-zu-JeL"/>
-                        <outlet property="passwordTextField" destination="594-NW-k3E" id="gh8-5H-VMx"/>
+                        <outlet property="passwordTextField" destination="H7E-zP-XMG" id="G7Q-B9-Rbu"/>
                         <outlet property="rePasswordTextField" destination="594-NW-k3E" id="SyW-dA-Jkd"/>
                         <segue destination="L13-mE-NGS" kind="show" id="kLR-uT-WIY"/>
                     </connections>
