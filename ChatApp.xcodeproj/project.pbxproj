@@ -21,6 +21,7 @@
 		B0C87AAA2A509C50000B7467 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0C87AA92A509C50000B7467 /* GoogleService-Info.plist */; };
 		B0C87AAD2A50A6F5000B7467 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B0C87AAC2A50A6F5000B7467 /* FirebaseAuth */; };
 		B0C87AAF2A50A6F5000B7467 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B0C87AAE2A50A6F5000B7467 /* FirebaseFirestore */; };
+		B0E884062A517EF00072467F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E884052A517EF00072467F /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B0C87AA52A509887000B7467 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		B0C87AA72A509A90000B7467 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B0C87AA92A509C50000B7467 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B0E884052A517EF00072467F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				B0C87AA72A509A90000B7467 /* HomeViewController.swift */,
 				B0C87AA32A509876000B7467 /* LoginViewController.swift */,
 				B0C87AA52A509887000B7467 /* SignupViewController.swift */,
+				B0E884052A517EF00072467F /* ChatViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				B0C87AA42A509876000B7467 /* LoginViewController.swift in Sources */,
 				B0C87AA62A509887000B7467 /* SignupViewController.swift in Sources */,
 				53BBE9502A4DCBBA00FC12E0 /* AppDelegate.swift in Sources */,
+				B0E884062A517EF00072467F /* ChatViewController.swift in Sources */,
 				53BBE9522A4DCBBA00FC12E0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
