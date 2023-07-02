@@ -24,6 +24,7 @@ class SignupViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if error == nil{
                     print("user is registerd")
+                    self.performSegue(withIdentifier: "goLogin", sender: self)
                 }else{
                     print(error!.localizedDescription)
                     self.signupErrorMessage.text = error!.localizedDescription
@@ -56,6 +57,7 @@ class SignupViewController: UIViewController {
         }
     }
     
+
     
     func reSetMessage() {
         errorMassage.text = ""
