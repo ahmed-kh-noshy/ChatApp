@@ -16,7 +16,7 @@ class ChatViewController: UIViewController {
     
     @IBAction func sendMessageButton(_ sender: UIButton) {
         messageArray.append(messageTextField.text!)
-        messageTextField.text = ""
+        messageTextField.text = nil
         messageTableView.reloadData()
         
     }
