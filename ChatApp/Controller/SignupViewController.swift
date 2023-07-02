@@ -12,6 +12,7 @@ class SignupViewController: UIViewController {
     var email: String = ""
     var password: String = ""
     @IBOutlet weak var errorMassage: UILabel!
+    @IBOutlet weak var signupErrorMessage: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var rePasswordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -20,17 +21,15 @@ class SignupViewController: UIViewController {
         email = emailTextField.text!
         if checkPassword() {
             reSetMessage()
-            print(email)
-            print(password)
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if error == nil{
-                    print("registerd")
+                    print("user is registerd")
                 }else{
-                    print(error as Any)
+                    print(error!.localizedDescription)
+                    self.signupErrorMessage.text = error!.localizedDescription
                 }
             }
         }
-        
     }
     
     

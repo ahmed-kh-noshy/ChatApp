@@ -186,11 +186,19 @@
                                     <action selector="signupButton:" destination="9FM-Rj-Xwe" eventType="touchUpInside" id="WdG-Ht-V8Z"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KF1-TX-R6h">
+                                <rect key="frame" x="50" y="729" width="293" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hi0-hb-1Iu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="KF1-TX-R6h" firstAttribute="top" secondItem="w1p-eK-Nth" secondAttribute="bottom" constant="31" id="222-Ni-EhE"/>
                             <constraint firstItem="v5Q-Wo-CSh" firstAttribute="leading" secondItem="hi0-hb-1Iu" secondAttribute="leading" constant="50" id="2Vo-ex-2w6"/>
+                            <constraint firstItem="hi0-hb-1Iu" firstAttribute="trailing" secondItem="KF1-TX-R6h" secondAttribute="trailing" constant="50" id="5TA-Dd-jPM"/>
                             <constraint firstItem="mIF-sY-03E" firstAttribute="top" secondItem="v5Q-Wo-CSh" secondAttribute="bottom" constant="50" id="5u5-JS-yJW"/>
                             <constraint firstItem="594-NW-k3E" firstAttribute="top" secondItem="H7E-zP-XMG" secondAttribute="bottom" constant="20" id="7dl-mX-k9Q"/>
                             <constraint firstItem="hi0-hb-1Iu" firstAttribute="trailing" secondItem="594-NW-k3E" secondAttribute="trailing" constant="50" id="9nb-De-rlk"/>
@@ -203,6 +211,7 @@
                             <constraint firstItem="zpK-Fl-oJs" firstAttribute="leading" secondItem="hi0-hb-1Iu" secondAttribute="leading" constant="50" id="bmH-Jk-JGJ"/>
                             <constraint firstItem="H7E-zP-XMG" firstAttribute="top" secondItem="zpK-Fl-oJs" secondAttribute="bottom" constant="20" id="d5N-Da-DU3"/>
                             <constraint firstItem="hi0-hb-1Iu" firstAttribute="trailing" secondItem="mIF-sY-03E" secondAttribute="trailing" constant="50" id="eUP-Sn-L7t"/>
+                            <constraint firstItem="KF1-TX-R6h" firstAttribute="leading" secondItem="hi0-hb-1Iu" secondAttribute="leading" constant="50" id="fmd-J6-i1q"/>
                             <constraint firstItem="zpK-Fl-oJs" firstAttribute="top" secondItem="mIF-sY-03E" secondAttribute="bottom" constant="103" id="gE1-75-Usw"/>
                             <constraint firstItem="hi0-hb-1Iu" firstAttribute="trailing" secondItem="MpA-en-hJI" secondAttribute="trailing" constant="50" id="ku0-Ya-c3S"/>
                             <constraint firstItem="hi0-hb-1Iu" firstAttribute="trailing" secondItem="v5Q-Wo-CSh" secondAttribute="trailing" constant="50" id="kxh-ib-E0K"/>
@@ -219,6 +228,7 @@
                         <outlet property="errorMassage" destination="MpA-en-hJI" id="QNe-zu-JeL"/>
                         <outlet property="passwordTextField" destination="H7E-zP-XMG" id="G7Q-B9-Rbu"/>
                         <outlet property="rePasswordTextField" destination="594-NW-k3E" id="SyW-dA-Jkd"/>
+                        <outlet property="signupErrorMessage" destination="KF1-TX-R6h" id="jaV-2T-VQQ"/>
                         <segue destination="L13-mE-NGS" kind="show" id="kLR-uT-WIY"/>
                     </connections>
                 </viewController>
