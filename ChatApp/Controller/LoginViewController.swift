@@ -32,6 +32,13 @@ class LoginViewController: UIViewController {
     }
     
     
+    @IBAction func goToSignupButton(_ sender: UIButton) {
+        let newController = self.storyboard!.instantiateViewController(withIdentifier: "signup")
+        //the identifier above comes from storyboard
+        self.navigationController!.pushViewController(newController, animated : true)
+    }
+    
+    
     
     
     override func viewDidLoad() {
