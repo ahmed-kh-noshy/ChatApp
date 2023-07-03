@@ -21,7 +21,6 @@ class ChatViewController: UIViewController {
        
         let message = Message(sender: Auth.auth().currentUser?.email , messageBody:messageTextField.text)
         saveMessages(message)
-       // messageArray.append(message)
         messageTextField.text = nil
         messageTableView.reloadData()
         
@@ -52,7 +51,10 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         messageTableView.dataSource = self
+        messageTextField.delegate = self
         self.messageTableView.separatorStyle = .none
+        messageTableView.register(UINib(nibName: "SenderTableViewCell", bundle: nil), forCellReuseIdentifier: "senderCell")
+        messageTableView.register(UINib(nibName: "ReceiverTableViewCell", bundle: nil), forCellReuseIdentifier: "receiverCell")
         getMessages()
         self.navigationItem.setHidesBackButton(true, animated: true)
     }
@@ -67,11 +69,18 @@ extension ChatViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if messageArray[indexPath.row].sender == Auth.auth().currentUser!.email{
+            let cell = messageTableView.dequeueReusableCell(withIdentifier: "senderCell", for: indexPath) as! SenderTableViewCell
+            cell.lable.text = messageArray[indexPath.row].messageBody
+            
+            return cell
+        }else{
+            let cell = messageTableView.dequeueReusableCell(withIdentifier: "receiverCell", for: indexPath) as! ReceiverTableViewCell
+            cell.lable.text = messageArray[indexPath.row].messageBody
+            
+            return cell
+        }
         
-        let cell = messageTableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath)
-        cell.textLabel?.text = messageArray[indexPath.row].messageBody
-        
-        return cell
         
     }
     
@@ -103,13 +112,29 @@ extension ChatViewController: UITableViewDataSource{
                 for doc in documents{
                     let msgsBody = doc.data()["messageBody"] as! String
                     let msgsSender = Auth.auth().currentUser?.email
-                    
+
                     let msgs = Message(sender: msgsSender, messageBody: msgsBody)
                     self.messageArray.append(msgs)
                     self.messageTableView.reloadData()
                 }
                 
+                let indexPath = IndexPath(row: self.messageArray.count - 1, section: 0)
+                if indexPath.row > 5 {
+                    self.messageTableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                }
                 
             }
+    }
+}
+
+extension ChatViewController: UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        let message = Message(sender: Auth.auth().currentUser?.email , messageBody:messageTextField.text)
+        saveMessages(message)
+        messageTextField.text = nil
+        messageTableView.reloadData()
+        return true
+
     }
 }
